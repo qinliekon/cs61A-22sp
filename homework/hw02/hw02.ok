@@ -1,6 +1,6 @@
 {
     "name": "Homework 2",
-    "endpoint": "ucb/cs61a/sp24/hw02",
+    "endpoint": "cal/cs61a/su24/hw02",
     "src": [
         "hw02.py"
     ],
@@ -13,7 +13,10 @@
         "accumulate",
         "summation_using_accumulate",
         "product_using_accumulate",
-        "make_repeater"
+        "make_repeater",
+        "digit_distance",
+        "interleaved_sum",
+        "count_coins"
     ],
     "protocols": [
         "restore",
