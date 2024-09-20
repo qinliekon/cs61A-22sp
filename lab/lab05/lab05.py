@@ -18,6 +18,12 @@ def flatten(s):
     [[1, [1, 1]], 1, [1, 1]]
     """
     "*** YOUR CODE HERE ***"
+    if not s:
+        return []
+    elif type(s[0]) == list:
+        return flatten(s[0]) + flatten(s[1:])
+    else:
+        return [s[0]] + flatten(s[1:])
 
 
 def couple(s, t):
@@ -34,7 +40,12 @@ def couple(s, t):
     """
     assert len(s) == len(t)
     "*** YOUR CODE HERE ***"
-
+    re = []
+    for i in range(len(s)):
+        item = [s[i],t[i]]
+        re.append(item)
+    return re
+  
 
 def insert_items(lst, entry, elem):
     """Inserts elem into lst after each occurence of entry and then returns lst.
@@ -63,6 +74,14 @@ def insert_items(lst, entry, elem):
     True
     """
     "*** YOUR CODE HERE ***"
+    index = 0
+    while index < len(lst):
+        if lst[index] == entry:
+            lst.insert(index + 1, elem)
+            if entry == elem:
+                index += 1
+        index += 1
+    return lst
 
 
 def change_abstraction(change):

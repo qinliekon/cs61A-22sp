@@ -67,4 +67,3 @@ def pascal(row, column):
     else:
         return pascal(row-1,column) + pascal(row-1,column-1)
     
-
